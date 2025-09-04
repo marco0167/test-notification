@@ -51,8 +51,7 @@ function PushNotificationManager() {
     })
     setSubscription(sub)
     const serializedSub = JSON.parse(JSON.stringify(sub))
-    const {subscription} = await subscribeUser(serializedSub)
-    alert('SUBSCRIPTION: ' + JSON.stringify(subscription))
+    await subscribeUser(serializedSub)
   }
 
   async function unsubscribeFromPush() {

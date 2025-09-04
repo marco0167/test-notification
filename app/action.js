@@ -17,7 +17,7 @@ export async function subscribeUser(sub) {
   subscription = sub;
   // In a production environment, you would want to store the subscription in a database
   // For example: await db.subscriptions.create({ data: sub })
-  return { success: true, subscription };
+  return { success: true };
 }
 
 export async function unsubscribeUser() {
@@ -38,8 +38,8 @@ export async function sendNotification(message) {
       JSON.stringify({
         title: 'Test2 Notification',
         body: message,
-        icon: '/icon1.png',
-        badge: '/icon1.png',
+        icon: '/image2.png',
+        badge: '/image2.png',
 
       })
     );

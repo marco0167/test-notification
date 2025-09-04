@@ -3,13 +3,19 @@ self.addEventListener('push', function (event) {
     const data = event.data.json()
     const options = {
       body: data.body,
-      icon: data.icon || '/icon.png',
-      badge: '/image2.png',
-      vibrate: [100, 50, 100],
+      icon: '/image2.png',
+      badge: '/globe.svg',
+      vibrate: [200, 100, 200, 100, 200, 100, 200],
+      image: '/image2.png',
       data: {
         dateOfArrival: Date.now(),
         primaryKey: '2',
       },
+      actions: [
+        { action: 'explore', title: 'Go to the site', icon: '/globe.svg' },
+        { action: 'close', title: 'Close the notification', icon: '/image2.png' },
+      ]
+
     }
     event.waitUntil(self.registration.showNotification(data.title, options))
   }
