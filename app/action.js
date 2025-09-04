@@ -36,11 +36,11 @@ export async function sendNotification(message) {
     await webpush.sendNotification(
       subscription,
       JSON.stringify({
-        title: 'Test Notification',
+        title: 'Test2 Notification',
         body: message,
         icon: '/icon1.png',
         badge: '/icon1.png',
-        
+
       })
     );
     return { success: true };
