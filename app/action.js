@@ -5,9 +5,8 @@ import webpush from 'web-push';
 if (!process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
   throw new Error('VAPID keys are missing in environment variables');
 }
-
 webpush.setVapidDetails(
-  '<mailto:your-email@example.com>',
+  'mailto:marcocoppola01671@gmail.com', // Replace with your actual email address
   process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY,
   process.env.VAPID_PRIVATE_KEY
 );
