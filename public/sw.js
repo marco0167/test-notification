@@ -6,7 +6,7 @@ self.addEventListener('push', function (event) {
       icon: '/globe.png',
       badge: '/globe.svg',
       vibrate: [200, 100, 200, 100, 200, 100, 200],
-      image: '/image2.png',
+      image: '/globe.svg',
       data: {
         dateOfArrival: Date.now(),
         primaryKey: '2',
