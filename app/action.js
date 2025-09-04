@@ -17,7 +17,7 @@ export async function subscribeUser(sub) {
   subscription = sub;
   // In a production environment, you would want to store the subscription in a database
   // For example: await db.subscriptions.create({ data: sub })
-  return { success: true };
+  return { success: true, subscription };
 }
 
 export async function unsubscribeUser() {
