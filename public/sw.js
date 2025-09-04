@@ -2,8 +2,8 @@ self.addEventListener('push', function (event) {
   if (event.data) {
     const data = event.data.json()
     const options = {
-      body: "eeee",
-      icon: '/image2.png',
+      body: "tttt",
+      icon: '/globe.svg',
       badge: '/globe.svg',
       vibrate: [200, 100, 200, 100, 200, 100, 200],
       image: '/image3.png',
